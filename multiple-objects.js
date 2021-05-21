@@ -12,6 +12,7 @@ function Hotel(name, rooms, booked) {
 // Create two hotel objects
 var quayHotel = new Hotel('Quay', 40, 25);
 var parkHotel = new Hotel('Park', 120, 77);
+var sunsetHotel = new Hotel('Sunset', 164, 88);
 
 
 // Update the HTML for the page
@@ -25,6 +26,10 @@ details2 += parkHotel.checkAvailability();
 var elHotel2 = document.getElementById('hotel2');
 elHotel2.textContent = details2;
 
+var details3 = parkHotel.name + ' rooms: ';
+details3 += parkHotel.checkAvailability();
+var elHotel3 = document.getElementById('hotel3');
+elHotel3.textContent = details3;
 /*
 NOTE: textContent does not work in IE8 or earlier
 You can use innerHTML on lines 21 and 26, but note the security issues on p228-231
